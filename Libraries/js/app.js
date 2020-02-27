@@ -1,18 +1,7 @@
-const isMobile = () => {
-    return window.innerWidth < 767;
-};
-
-
-$(document).ready(() => {
-
-    if (isMobile()) {
-        // alert("'Detected' mobile device; fixing things up");
-        let titlebars = document.querySelectorAll(".titlebar");
-
-        titlebars.forEach((titlebar) => {
-            // TODO: Auto-convert to mobile-friendly bar
-        });
-    }
-
+$(document).ready(function () {
+    $('.dropdown-submenu a.test').on("click", function (e) {
+        $(this).next('ul').toggle();
+        e.stopPropagation();
+        e.preventDefault();
+    });
 });
-
