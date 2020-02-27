@@ -232,13 +232,19 @@ img {
     }
 
     & .dropdown.item {
-      position: relative;
       display: inline-block;
       overflow: visible;
 
-      & .dropdown-content {
-        max-width: 100vw;
+      &:hover .dropdown-content {
+        position: unset;
         max-height: 100vh;
+      }
+
+      & .dropdown-content {
+        max-height: 0px;
+        & .item {
+          display: inline-flex;
+        }
       }
     }
   }

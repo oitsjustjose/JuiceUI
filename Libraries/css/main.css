@@ -259,14 +259,23 @@ body {
 }
 
 .dropdown.item .dropdown-content .dropdown.item {
-  position: relative;
   display: inline-block;
   overflow: visible;
 }
 
-.dropdown.item .dropdown-content .dropdown.item .dropdown-content {
-  max-width: 100vw;
+.dropdown.item .dropdown-content .dropdown.item:hover .dropdown-content {
+  position: unset;
   max-height: 100vh;
+}
+
+.dropdown.item .dropdown-content .dropdown.item .dropdown-content {
+  max-height: 0px;
+}
+
+.dropdown.item .dropdown-content .dropdown.item .dropdown-content .item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .dropdown.item .dropdown.item .dropdown-content {
