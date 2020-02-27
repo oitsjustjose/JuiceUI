@@ -10,10 +10,7 @@ $(document).ready(() => {
         let titlebars = document.querySelectorAll(".titlebar");
 
         titlebars.forEach((titlebar) => {
-
-            // titlebar.childNodes.forEach((child)) => {
-
-            // };
+            // TODO: Auto-convert to mobile-friendly bar
         });
     }
 

@@ -91,8 +91,6 @@ a:hover {
 
 .masthead .down {
   position: absolute;
-  -webkit-transform: 50%, 50%;
-          transform: 50%, 50%;
   bottom: 0;
 }
 
@@ -168,12 +166,17 @@ img.large {
           align-items: center;
 }
 
-body.masthead {
+.masthead {
   height: calc(100vh - 3rem);
 }
 
 body {
   margin-top: 3rem;
+}
+
+.titlebar.top a {
+  color: #eeeeee;
+  text-decoration: none;
 }
 
 .titlebar.top .item {
@@ -252,14 +255,30 @@ button {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
 
 button.small {
   padding: 0.5rem 0.75rem;
 }
 
+button.hoverable.outlined:hover {
+  background-color: transparent;
+  border: 2px solid #404040;
+}
+
 button.hoverable:hover {
   background-color: #404040;
+}
+
+button.outlined {
+  background-color: transparent;
+  border: 2px solid #3a3a3a;
+}
+
+button.outlined:active {
+  background-color: transparent;
+  border: 2px solid #404040;
 }
 
 button.red {
@@ -270,12 +289,34 @@ button.red:active {
   background-color: #fa755d;
 }
 
+button.red.outlined {
+  background-color: transparent;
+  color: #ff4340;
+  border: 2px solid #ff4340;
+}
+
+button.red.outlined:active {
+  color: #fa755d;
+  border: 2px solid #fa755d;
+}
+
 button.green {
   background-color: #7cb342;
 }
 
 button.green:active {
   background-color: #85d82d;
+}
+
+button.green.outlined {
+  background-color: transparent;
+  color: #7cb342;
+  border: 2px solid #7cb342;
+}
+
+button.green.outlined:active {
+  color: #85d82d;
+  border: 2px solid #85d82d;
 }
 
 button.cyan {
@@ -285,6 +326,17 @@ button.cyan {
 
 button.cyan:active {
   background-color: #00d9ff;
+}
+
+button.cyan.outlined {
+  background-color: transparent;
+  color: #00bee0;
+  border: 2px solid #00bee0;
+}
+
+button.cyan.outlined:active {
+  color: #00d9ff;
+  border: 2px solid #00d9ff;
 }
 
 button:active {

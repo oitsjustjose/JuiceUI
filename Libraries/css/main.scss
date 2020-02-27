@@ -87,7 +87,6 @@ a {
 
   .down {
     position: absolute;
-    transform: (50%, 50%);
     bottom: 0;
     i {
       font-size: 64px;
@@ -153,12 +152,17 @@ img {
   flex-direction: row;
   align-items: center;
 
-  @at-root body.masthead {
+  @at-root .masthead {
     height: calc(100vh - 3rem);
   }
 
   @at-root body {
     margin-top: 3rem;
+  }
+
+  a {
+    color: $foreground;
+    text-decoration: none;
   }
 
   .item {
@@ -229,14 +233,31 @@ button {
   background-color: map-get($dark, "button");
   color: $foreground;
   user-select: none;
+  cursor: pointer;
 
   &.small {
     padding: 0.5rem 0.75rem;
   }
 
   &.hoverable {
+    &.outlined {
+      &:hover {
+        background-color: transparent;
+        border: 2px solid map-get($dark, "buttonActive");
+      }
+    }
+
     &:hover {
       background-color: map-get($dark, "buttonActive");
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 2px solid map-get($dark, "button");
+    &:active {
+      background-color: transparent;
+      border: 2px solid map-get($dark, "buttonActive");
     }
   }
 
@@ -245,12 +266,32 @@ button {
     &:active {
       background-color: $brightRed;
     }
+
+    &.outlined {
+      background-color: transparent;
+      color: $red;
+      border: 2px solid $red;
+      &:active {
+        color: $brightRed;
+        border: 2px solid $brightRed;
+      }
+    }
   }
 
   &.green {
     background-color: $green;
     &:active {
       background-color: $brightGreen;
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: $green;
+      border: 2px solid $green;
+      &:active {
+        color: $brightGreen;
+        border: 2px solid $brightGreen;
+      }
     }
   }
 
@@ -259,6 +300,16 @@ button {
     color: $background;
     &:active {
       background-color: $brightCyan;
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: $cyan;
+      border: 2px solid $cyan;
+      &:active {
+        color: $brightCyan;
+        border: 2px solid $brightCyan;
+      }
     }
   }
 
