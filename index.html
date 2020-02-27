@@ -22,24 +22,44 @@
 <body>
     <div class="top titlebar">
 
+        <div class="mobile-menu">
+            <div class="close-mobile-menu" onclick='toggleMenu()'>
+                <i class="fa fa-close"></i>
+            </div>
+
+            <div class="compact item">
+                About
+            </div>
+            <div class="compact item">
+                Github
+            </div>
+            <div class="compact item">
+                Reddit
+            </div>
+            <div class="compact item">
+                YouTube
+            </div>
+            <div class="compact submenu item" onclick="toggleSubMenu(this)">
+                <span>
+                    Support&nbsp;<i class="fa fa-caret-down"></i>
+                </span>
+                <div class="compact sub item">
+                    Item 1
+                </div>
+                <div class="compact sub item">
+                    Item 2
+                </div>
+                <div class="compact sub item">
+                    Item 3
+                </div>
+            </div>
+        </div>
+
         <!-- Mobile friendly menu -->
-        <div class="dropdown item compact">
+        <div class="dropdown item compact" onclick='toggleMenu()'>
             <span>
                 <i class="fa fa-bars"></i>&nbsp;Menu
             </span>
-            <div class="dropdown-content">
-                <div class="dropdown item">
-                    <span>
-                        Support&nbsp;<i class="fa fa-caret-right"></i>
-                    </span>
-                    <div class="dropdown-content">
-                        <div class="item compact">Link 1</div>
-                        <div class="item compact">Link 2</div>
-                        <div class="item compact">Link 3</div>
-                    </div>
-                </div>
-
-            </div>
         </div>
 
 
