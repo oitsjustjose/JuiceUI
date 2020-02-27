@@ -421,3 +421,6 @@ button {
     background-color: map-get($dark, "buttonActive");
   }
 }
+.no-scroll {
+  overflow: hidden;
+}

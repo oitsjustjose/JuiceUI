@@ -36,7 +36,19 @@ const toggleSubMenu = (el) => {
 };
 
 const toggleMenu = () => {
-    $(".mobile-menu").toggle("slide", "left");
+    $(".mobile-menu").toggle("slide", "left", () => {
+
+        let visible = document.querySelector(".mobile-menu").style.display != "none";
+
+        if (visible) {
+            document.body.classList.add("no-scroll");
+            console.log("not visible");
+        } else {
+            document.body.classList.remove("no-scroll");
+            console.log("visible");
+        }
+    });
+
 };
 
 $(document).ready(() => {

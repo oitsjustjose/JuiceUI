@@ -479,4 +479,8 @@ button:active {
   padding-left: 3rem;
   background-color: #404040;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
 /*# sourceMappingURL=main.css.map */
