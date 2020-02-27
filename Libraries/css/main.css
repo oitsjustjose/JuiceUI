@@ -1,0 +1,234 @@
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+b,
+i,
+body,
+button {
+  font-family: "Spartan";
+}
+
+.code {
+  font-family: "Fira Code";
+  -webkit-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures;
+}
+
+pre {
+  font-family: "Fira Code";
+  -webkit-font-variant-ligatures: common-ligatures;
+          font-variant-ligatures: common-ligatures;
+  white-space: pre-wrap;
+  /* css-3 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+}
+
+body {
+  background-color: #252525;
+  color: #eeeeee;
+}
+
+a {
+  color: #ff4340;
+}
+
+a:hover {
+  color: #bb312f;
+}
+
+.container {
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+.centered {
+  text-align: center;
+  margin: auto;
+}
+
+.blurred {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.blurred.unblurable:hover {
+  -webkit-transition: all ease-in 150ms;
+  transition: all ease-in 150ms;
+  -webkit-filter: none;
+          filter: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+img.rounded {
+  border-radius: 8px;
+}
+
+img.thumbnail {
+  width: 24px;
+}
+
+img.small {
+  width: 128px;
+}
+
+img.medium {
+  width: 256px;
+}
+
+img.large {
+  width: 512px;
+}
+
+.titlebar.top {
+  background-color: #2a2a2a;
+  color: #eeeeee;
+  position: fixed;
+  z-index: 10000000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body {
+  margin-top: 4rem;
+}
+
+.titlebar.top .item {
+  background-color: #3a3a3a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Spartan";
+  padding: 0px 1rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.titlebar.top .item:hover {
+  background-color: #2a2a2a;
+  -webkit-transition: all ease-in 150ms;
+  transition: all ease-in 150ms;
+}
+
+.divider {
+  width: 70vw;
+  height: 10px;
+  border-bottom: 1px solid #3a3a3a;
+  margin: 1rem 15vw;
+}
+
+.divider.wide {
+  width: 100vw;
+}
+
+.dropdown.item:hover .dropdown-content {
+  max-height: 100vh;
+  display: block;
+}
+
+.dropdown.item .dropdown-content {
+  max-height: 0px;
+  overflow-y: hidden;
+  -webkit-transition: max-height 0.5s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
+  position: absolute;
+  background-color: #3a3a3a;
+  min-width: 160px;
+  margin-left: -1rem;
+  margin-top: 5.45em;
+}
+
+.dropdown.item .dropdown-content a {
+  color: #eeeeee;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown.item .dropdown-content a:hover {
+  background-color: #252525;
+  -webkit-transition: all ease-in 150ms;
+  transition: all ease-in 150ms;
+}
+
+button {
+  padding: .75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: #3a3a3a;
+  color: #eeeeee;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+button.small {
+  padding: 0.5rem .75rem;
+}
+
+button.hoverable:hover {
+  background-color: #404040;
+}
+
+button.red {
+  background-color: #ff4340;
+}
+
+button.red:active {
+  background-color: #fa755d;
+}
+
+button.green {
+  background-color: #7cb342;
+}
+
+button.green:active {
+  background-color: #85d82d;
+}
+
+button.cyan {
+  background-color: #00bee0;
+  color: #252525;
+}
+
+button.cyan:active {
+  background-color: #00d9ff;
+}
+
+button:active {
+  background-color: #404040;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,225 @@
+$dark: (
+  "background": #2a2a2a,
+  "foreground": #eeeeee,
+  "item": #3a3a3a,
+  "button": #3a3a3a,
+  "buttonActive": #404040
+);
+
+$background: #252525;
+$foreground: #eeeeee;
+$brightRed: rgb(250, 117, 93);
+$red: #ff4340;
+$darkRed: #bb312f;
+$brightCyan: #00d9ff;
+$cyan: #00bee0;
+$brightGreen: #85d82d;
+$green: #7cb342;
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+b,
+i,
+body,
+button {
+  font-family: "Spartan";
+}
+
+.code {
+  font-family: "Fira Code";
+  font-variant-ligatures: common-ligatures;
+}
+
+pre {
+  font-family: "Fira Code";
+  font-variant-ligatures: common-ligatures;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word;
+}
+
+body {
+  background-color: $background;
+  color: $foreground;
+}
+
+a {
+  color: $red;
+  &:hover {
+    color: $darkRed;
+  }
+}
+
+.container {
+  width: 90vw;
+  margin-left: 5vw;
+}
+
+.centered {
+  text-align: center;
+  margin: auto;
+}
+
+.blurred {
+  filter: blur(5px);
+
+  &.unblurable {
+    &:hover {
+      transition: all ease-in 150ms;
+      filter: none;
+    }
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  &.rounded {
+    border-radius: 8px;
+  }
+
+  &.thumbnail {
+    width: 24px;
+  }
+
+  &.small {
+    width: 128px;
+  }
+
+  &.medium {
+    width: 256px;
+  }
+  &.large {
+    width: 512px;
+  }
+}
+
+.titlebar.top {
+  background-color: map-get($dark, "background");
+  color: map-get($dark, "foreground");
+  position: fixed;
+  z-index: 10000000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @at-root body {
+    margin-top: 4rem;
+  }
+
+  .item {
+    background-color: map-get($dark, "item");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Spartan";
+    padding: 0px 1rem;
+    height: 100%;
+    cursor: pointer;
+
+    &:hover {
+      background-color: map-get($dark, "background");
+      transition: all ease-in 150ms;
+    }
+  }
+}
+
+.divider {
+  width: 70vw;
+  height: 10px;
+  border-bottom: 1px solid map-get($dark, "item");
+  margin: 1rem 15vw;
+  &.wide {
+    width: 100vw;
+  }
+}
+
+.dropdown.item {
+  &:hover .dropdown-content {
+    max-height: 100vh;
+    display: block;
+  }
+
+  & .dropdown-content {
+    max-height: 0px;
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.5s ease-in-out;
+    -moz-transition: max-height 0.5s ease-in-out;
+    -o-transition: max-height 0.5s ease-in-out;
+    transition: max-height 0.5s ease-in-out;
+    position: absolute;
+    background-color: map-get($dark, "item");
+    min-width: 160px;
+    margin-left: -1rem;
+    margin-top: 5.45em;
+
+    & a {
+      color: $foreground;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        background-color: $background;
+        transition: all ease-in 150ms;
+      }
+    }
+  }
+}
+
+button {
+  padding: .75rem 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: map-get($dark, "button");
+  color: $foreground;
+  user-select: none;
+
+  &.small {
+    padding: 0.5rem .75rem;
+  }
+
+  &.hoverable {
+    &:hover {
+      background-color: map-get($dark, "buttonActive");
+    }
+  }
+
+  &.red {
+    background-color: $red;
+    &:active {
+      background-color: $brightRed;
+    }
+  }
+
+  &.green {
+    background-color: $green;
+    &:active {
+      background-color: $brightGreen;
+    }
+  }
+
+  &.cyan {
+    background-color: $cyan;
+    color: $background;
+    &:active {
+      background-color: $brightCyan;
+    }
+  }
+
+  &:active {
+    background-color: map-get($dark, "buttonActive");
+  }
+}

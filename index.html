@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Libraries/scss/main.css">
 
     <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Spartan&display=swap" rel="stylesheet">
-    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> -->
-    <link href="Libraries/font-awesome/scss/fontawesome.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="Libraries/css/main.css" rel="stylesheet">
 
     <script src="Libraries/js/jquery-3.4.1.min.js"></script>
     <script src="Libraries/js/jquery-ui.min.js"></script>
@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div class="dark top titlebar">
+    <div class="top titlebar">
         <div class="item">
             About
         </div>
@@ -28,8 +28,15 @@
         <div class="item">
             Reddit
         </div>
-        <div class="dropdown item">
-            Support <i class="fa fa-caret-down"></i>
+        <div class="dropdown item slidedown">
+            <span>
+                Support&nbsp;<i class="fa fa-caret-down"></i>
+            </span>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
         </div>
     </div>
     <div class="centered container">
@@ -41,9 +48,13 @@
         </h2>
         <a href="#">Here we have links</a>
         <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est sequi accusantium aperiam ab facilis
-            perspiciatis consequatur. Voluptatum, dolor, iusto eum hic error amet vel fugiat sint earum rem, temporibus
-            distinctio.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere fugit recusandae aperiam ullam, nobis,
+            nostrum commodi nam sit atque dolorum quibusdam earum id dicta tempore odit autem maxime doloribus, quos
+            neque eveniet. Provident dicta nam sequi rem aspernatur ea odit fugiat quis! Delectus suscipit saepe velit
+            reiciendis commodi modi aliquam ipsam aliquid laborum voluptates error ab, incidunt eos ad nihil minima
+            voluptatum obcaecati nobis in enim sunt iusto. Sunt in, perferendis sequi numquam nostrum obcaecati animi
+            nobis at cupiditate dolore quasi error. Veniam similique inventore provident reprehenderit vel quisquam,
+            quas, recusandae aperiam nostrum minus fugit cum quo? Debitis, commodi maiores!
         </p>
 
         Centering a group of items can be easily done using the <span class="code">centered</span> class:
@@ -67,20 +78,126 @@
 
     <div class="divider"> </div>
 
-    <div class="centered container">
-        <h2>Containers</h2>
+    <div class="container">
+        <h2 class="centered">
+            Images
+        </h2>
 
+        <p>
+            Images have a few different classes that correspond to their sizes:
+        </p>
+
+        <p>
+            Thumbnails | <span class="code">class='thumbnail'</span>:
+        </p>
+        <div class="centered container">
+            <img class="thumbnail" src="https://forgeserv.net/Resources/logo.png">
+        </div>
+
+
+        <p>
+            Small | <span class="code">class='small'</span>:
+        </p>
+        <div class="centered container">
+            <img class="small" src="https://forgeserv.net/Resources/logo.png">
+        </div>
+
+
+        <p>
+            Medium | <span class="code">class='medium'</span>:
+        </p>
+        <div class="centered container">
+            <img class="medium" src="https://forgeserv.net/Resources/logo.png">
+        </div>
+
+
+        <p>
+            Large | <span class="code">class='large'</span>:
+        </p>
+        <div class="centered container">
+            <img class="large" src="https://forgeserv.net/Resources/logo.png">
+        </div>
+
+
+        <p>
+            Images (and most things actually!) can be blurred using <span class="code">class='blurred'</span>:
+        </p>
+
+        <div class="centered container">
+            <img class="medium blurred" src="https://forgeserv.net/Resources/logo.png">
+        </div>
+
+        <p>
+            You can make them unblurable on hover by adding the <span class="code">unblurable</span> class:
+        </p>
+        <div class="centered container">
+            <img class="medium blurred unblurable" src="https://forgeserv.net/Resources/logo.png">
+        </div>
+
+        <p>
+            Lastly, images can be rounded | <span class="code">rounded</span>:
+        </p>
+        <div class="centered container">
+            <img class="medium rounded" src="https://forgeserv.net/Resources/Pano1-Blurred.png">
+        </div>
     </div>
 
-    <img class="thumbnail" src="https://forgeserv.net/Resources/logo.png">
-    <img class="small" src="https://forgeserv.net/Resources/logo.png">
-    <img class="medium" src="https://forgeserv.net/Resources/logo.png">
-    <img class="large" src="https://forgeserv.net/Resources/logo.png">
-    <img class="large blurred" src="https://forgeserv.net/Resources/logo.png">
-    <img class="large blurred unblurable" src="https://forgeserv.net/Resources/logo.png">
-    <img class="rounded" src="https://forgeserv.net/Resources/Pano1-Blurred.png">
-    <img class="medium rounded" src="https://forgeserv.net/Resources/Pano1-Blurred.png">
+    <div class="divider"> </div>
+
+    <div class="container">
+        <h2>Buttons</h2>
+
+        <p>
+            Buttons have colors!
+        </p>
+
+        <table class="centered">
+            <tr>
+                <td>
+                    <button>Plain</button>
+                </td>
+                <td>
+                    <button class="red">Red</button>
+                </td>
+                <td>
+                    <button class="cyan">Cyan</button>
+                </td>
+                <td>
+                    <button class="green">Green</button>
+                </td>
+                <td>
+                    <button class="hoverable">Active On Hover</button>
+                </td>
+            </tr>
+        </table>
+
+        <p>
+            Buttons can also be <sub>smol</sub>
+        </p>
+
+        <table class="centered">
+            <tr>
+                <td>
+                    <button class="small">Plain</button>
+                </td>
+                <td>
+                    <button class="red small">Red</button>
+                </td>
+                <td>
+                    <button class="cyan small">Cyan</button>
+                </td>
+                <td>
+                    <button class="green small">Green</button>
+                </td>
+                <td>
+                    <button class="hoverable small">Active On Hover</button>
+                </td>
+            </tr>
+        </table>
     </div>
+
+
+
 </body>
 
 </html>
