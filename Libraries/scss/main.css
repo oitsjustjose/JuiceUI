@@ -6088,14 +6088,6 @@ body {
   cursor: pointer;
 }
 
-.dropdown {
-  display: inline-block;
-}
-
-.dropdown::after {
-  content: "\f0d7";
-}
-
 .divider {
   width: 100vw;
   height: 10px;

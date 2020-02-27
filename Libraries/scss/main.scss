@@ -160,15 +160,6 @@ img {
   }
 }
 
-.dropdown {
-    @extend %fa-icon;
-    @extend .fas;
-    
-  display: inline-block;
-  &::after {
-    content: fa-content($fa-var-caret-down);
-  }
-}
 
 .divider {
   width: 100vw;
