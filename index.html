@@ -28,16 +28,13 @@
             </div>
 
             <div class="compact item" for-modal="aboutModal">
-                About
+                <span>About&nbsp;<i class="fa fa-info"></i></span>
             </div>
-            <div class="compact item">
-                Github
-            </div>
-            <div class="compact item">
-                Reddit
-            </div>
-            <div class="compact item">
-                YouTube
+            <a href="https://github.com/oitsjustjose/ThemeKit" target="_blank" class="compact item">
+                <span>GitHub&nbsp;<i class="fa fa-github"></i></span>
+            </a>
+            <div class="compact item" for-modal="ytModal">
+                <span>YouTube&nbsp;<i class="fa fa-youtube-play"></i></span>
             </div>
             <div class="compact submenu item" onclick="toggleSubMenu(this)">
                 <span>
@@ -69,11 +66,8 @@
         <a href="https://github.com/oitsjustjose/ThemeKit" target="_blank" class="item">
             <span>GitHub&nbsp;<i class="fa fa-github"></i></span>
         </a>
-        <div class="item">
-            Reddit
-        </div>
-        <div class="item">
-            YouTube
+        <div class="item" for-modal="ytModal">
+            <span>YouTube&nbsp;<i class="fa fa-youtube-play"></i></span>
         </div>
         <div class="dropdown item">
             <span>
@@ -288,6 +282,22 @@
                         This page not only shows you how these things work, but demo to me how they're turning out too!
                     </li>
                 </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="ytModal" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h2>
+                YouTube Embed Demo In A Modal
+            </h2>
+            <div class="embed">
+                <iframe src="https://www.youtube.com/embed/IFfLCuHSZ-U" frameborder="0"
+                    allow="accelerometer;; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
             </div>
         </div>
     </div>
