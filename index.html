@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <div class="top titlebar">
+    <div class="top translucent titlebar">
         <div class="mobile-menu">
             <div class="close-mobile-menu" onclick='toggleMenu()'>
                 <i class="fa fa-close"></i>
@@ -33,9 +33,6 @@
             <a href="https://github.com/oitsjustjose/ThemeKit" target="_blank" class="compact item">
                 <span>GitHub&nbsp;<i class="fa fa-github"></i></span>
             </a>
-            <div class="compact item" for-modal="ytModal">
-                <span>YouTube&nbsp;<i class="fa fa-youtube-play"></i></span>
-            </div>
             <div class="compact submenu item" onclick="toggleSubMenu(this)">
                 <span>
                     Support&nbsp;<i class="fa fa-caret-right"></i>
@@ -66,9 +63,6 @@
         <a href="https://github.com/oitsjustjose/ThemeKit" target="_blank" class="item">
             <span>GitHub&nbsp;<i class="fa fa-github"></i></span>
         </a>
-        <div class="item" for-modal="ytModal">
-            <span>YouTube&nbsp;<i class="fa fa-youtube-play"></i></span>
-        </div>
         <div class="dropdown item">
             <span>
                 Support&nbsp;<i class="fa fa-caret-down"></i>
@@ -83,7 +77,7 @@
     </div>
 
 
-    <div class="masthead">
+    <div class="gradient masthead">
         <p class="content">
             <b>Juice-UI</b>
             <span class="subheader">oitsjustjose's Custom Themekit</span>
@@ -98,35 +92,92 @@
         <h2 class="centered">
             General Theming:
         </h2>
-        <a href="#">Here we have links</a>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere fugit recusandae aperiam ullam, nobis,
-            nostrum commodi nam sit atque dolorum quibusdam earum id dicta tempore odit autem maxime doloribus, quos
-            neque eveniet. Provident dicta nam sequi rem aspernatur ea odit fugiat quis! Delectus suscipit saepe velit
-            reiciendis commodi modi aliquam ipsam aliquid laborum voluptates error ab, incidunt eos ad nihil minima
-            voluptatum obcaecati nobis in enim sunt iusto. Sunt in, perferendis sequi numquam nostrum obcaecati animi
-            nobis at cupiditate dolore quasi error. Veniam similique inventore provident reprehenderit vel quisquam,
-            quas, recusandae aperiam nostrum minus fugit cum quo? Debitis, commodi maiores!
-        </p>
 
-        Centering a group of items can be easily done using the <span class="code">centered</span> class:
+        <div class="in-center">
+            <h3>
+                Font Choices
+            </h3>
+        </div>
 
-        <p class="code">
-            &lt;p class="centered"&gt;<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, voluptatem
-            voluptas natus aperiam porro placeat laboriosam incidunt suscipit cumque similique quidem obcaecati magni,
-            provident hic ut consequuntur reiciendis dicta rem.<br>
-            &lt;/p&gt;
-        </p>
+        <div class="in-center">
+            <table cellspacing="16">
+                <tr>
+                    <th style="text-align: left;">
+                        Standard Font
+                    </th>
+                    <td sytle="text-align: center">
+                        :
+                    </td>
+                    <td style="text-align: left;">
+                        <a href="https://fonts.google.com/specimen/Spartan" target="_blank">Spartan</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: left;">
+                        Monospace Font
+                    </th>
+                    <td sytle="text-align: center">
+                        :
+                    </td>
+                    <td style="text-align: left;">
+                        <a href="https://fonts.google.com/specimen/Fira%20Code" target="_blank">Fira Code</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
-        Results in:
+        <div class="in-center">
+            <p>
+                Fira Code's Font Ligatures are enabled too!
+            </p>
+        </div>
 
-        <p class="centered">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, cumque ex in doloribus culpa aliquid, ea
-            quia minima consectetur voluptatem eveniet repellendus odio recusandae dolorum molestias assumenda, nam
-            maiores accusamus.
-        </p>
+
+        <div class="in-center">
+            <p class="code">
+                const foo = () => {
+                if(bar == 1 && bar != 2) { return bar }
+                };
+            </p>
+        </div>
+
+
+        <div class="in-center">
+            <h3>
+                Coloring:
+            </h3>
+        </div>
+
+        <div class="in-center">
+            <p>
+                There are a few different colors used, but not many. If you want to re-compile the SCSS code, look at
+                <span class="code">Libraries/css/themekit/_colors.scss</span>.
+            </p>
+        </div>
+
+        <div class="in-center">
+            <table cellspacing="16">
+                <tr>
+                    <td style="background-color: #ff4340;">
+                        Red
+                    </td>
+                    <td style="background-color: #00bee0; color: #252525;">
+                        Blue
+                    </td>
+                    <td style="background-color: #7cb342;">
+                        Green
+                    </td>
+                    <td style="background-color: #252525; color: #eeeeee;">
+                        Background
+                    </td>
+                    <td style="background-color: #eeeeee; color: #252525;">
+                        Foreground
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
+
 
     <div class="divider"> </div>
 
@@ -135,62 +186,75 @@
             Images
         </h2>
 
-        <p>
+        <h3 class="centered" style="margin-top: 2rem; margin-bottom: 2rem;">
             Images have a few different classes that correspond to their sizes:
-        </p>
+        </h3>
 
-        <p>
-            Thumbnails | <span class="code">class='thumbnail'</span>:
-        </p>
         <div class="centered container">
-            <img class="thumbnail" src="https://forgeserv.net/Resources/logo.png">
+            <p>
+                Thumbnails | <span class="code">class='thumbnail'</span>:
+            </p>
+            <img class="thumbnail" src="https://oitsjustjose.com/Resources/img/logo.png">
         </div>
 
+        <div class="divider"></div>
 
-        <p>
-            Small | <span class="code">class='small'</span>:
-        </p>
+
         <div class="centered container">
-            <img class="small" src="https://forgeserv.net/Resources/logo.png">
+            <p>
+                Small | <span class="code">class='small'</span>:
+            </p>
+            <img class="small" src="https://oitsjustjose.com/Resources/img/logo.png">
         </div>
 
+        <div class="divider"></div>
 
-        <p>
-            Medium | <span class="code">class='medium'</span>:
-        </p>
+
         <div class="centered container">
-            <img class="medium" src="https://forgeserv.net/Resources/logo.png">
+            <p>
+                Medium | <span class="code">class='medium'</span>:
+            </p>
+            <img class="medium" src="https://i.picsum.photos/id/237/536/354.jpg">
         </div>
 
+        <div class="divider"></div>
 
-        <p>
-            Large | <span class="code">class='large'</span>:
-        </p>
+
         <div class="centered container">
-            <img class="large" src="https://forgeserv.net/Resources/logo.png">
+            <p>
+                Large | <span class="code">class='large'</span>:
+            </p>
+            <img class="large" src="https://i.picsum.photos/id/1002/4312/2868.jpg">
         </div>
 
+        <div class="divider"></div>
 
-        <p>
-            Images (and most things actually!) can be blurred using <span class="code">class='blurred'</span>:
-        </p>
 
         <div class="centered container">
-            <img class="medium blurred" src="https://forgeserv.net/Resources/logo.png">
+            <p>
+                Images (and most things actually!) can be blurred using <span class="code">class='blurred'</span>:
+            </p>
+            <img class="large blurred" src="https://i.picsum.photos/id/107/5760/3840.jpg">
         </div>
 
-        <p>
-            You can make them unblurable on hover by adding the <span class="code">unblurable</span> class:
-        </p>
+        <div class="divider"></div>
+
+
         <div class="centered container">
-            <img class="medium blurred unblurable" src="https://forgeserv.net/Resources/logo.png">
+            <p>
+                You can make them unblurable on hover by adding the <span class="code">class='unblurable'</span>:
+            </p>
+            <img class="large blurred unblurable" src="https://i.picsum.photos/id/1021/2048/1206.jpg">
         </div>
 
-        <p>
-            Lastly, images can be rounded | <span class="code">rounded</span>:
-        </p>
+        <div class="divider"></div>
+
+
         <div class="centered container">
-            <img class="medium rounded" src="https://forgeserv.net/Resources/Pano1-Blurred.png">
+            <p>
+                Lastly, images can be rounded with <span class="code">class='rounded'</span>:
+            </p>
+            <img class="large rounded" src="https://i.picsum.photos/id/1002/4312/2868.jpg">
         </div>
     </div>
 
@@ -199,9 +263,18 @@
     <div class="container">
         <h2 class="centered">Buttons</h2>
 
-        <p>
+        <p class="centered" style="margin-top: 2rem; margin-bottom: .5rem;">
             Buttons have colors!
         </p>
+
+        <div class="in-center">
+            <p class="code">
+                &lt;button&gt;Plain&lt;/button&gt;<br>
+                &lt;button class="red"&gt;Red&lt;/button&gt;<br>
+                &lt;button class="cyan"&gt;Cyan&lt;/button&gt;<br>
+                &lt;button class="green"&gt;Green&lt;/button&gt;<br>
+            </p>
+        </div>
 
         <table class="centered">
             <tr>
@@ -220,9 +293,18 @@
             </tr>
         </table>
 
-        <p>
+        <p class="centered" style="margin-top: 2rem; margin-bottom: .5rem;">
             Buttons can also be <sub>smol</sub>
         </p>
+
+        <div class="in-center">
+            <p class="code">
+                &lt;button class="small"&gt;Plain&lt;/button&gt;<br>
+                &lt;button class="small red"&gt;Red&lt;/button&gt;<br>
+                &lt;button class="small cyan"&gt;Cyan&lt;/button&gt;<br>
+                &lt;button class="small green"&gt;Green&lt;/button&gt;<br>
+            </p>
+        </div>
 
         <table class="centered">
             <tr>
@@ -241,9 +323,18 @@
             </tr>
         </table>
 
-        <p>
+        <p class="centered" style="margin-top: 2rem; margin-bottom: .5rem;">
             Lastly, buttons can be just their outlines!
         </p>
+
+        <div class="in-center">
+            <p class="code">
+                &lt;button class="outlined"&gt;Plain&lt;/button&gt;<br>
+                &lt;button class="outlined red"&gt;Red&lt;/button&gt;<br>
+                &lt;button class="outlined cyan"&gt;Cyan&lt;/button&gt;<br>
+                &lt;button class="outlined green"&gt;Green&lt;/button&gt;<br>
+            </p>
+        </div>
 
         <table class="centered">
             <tr>
@@ -261,6 +352,79 @@
                 </td>
             </tr>
         </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <h2 class="centered">
+            Modals
+        </h2>
+
+        <p class="centered">
+            Modals are pretty straight foward to implement:
+        </p>
+
+        <div class="in-center">
+            <p class="code">
+                &lt;div&nbsp;id="testModal"&nbsp;class="modal"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="modal-content"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&nbsp;class="close"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i&nbsp;class="fa&nbsp;fa-close"&gt;&lt;/i&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/span&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YouTube&nbsp;Embed&nbsp;Demo&nbsp;In&nbsp;A&nbsp;Modal<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/h2&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&nbsp;class="embed"&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe&nbsp;src="https://www.youtube.com/embed/5tjr7g5WFqc"&nbsp;frameborder="0"<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allow="accelerometer;&nbsp;encrypted-media;&nbsp;gyroscope;&nbsp;picture-in-picture"&nbsp;allowfullscreen&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/iframe&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+                &lt;/div&gt;
+            </p>
+        </div>
+
+        <p class="centered">
+            This modal won't be shown in any way though! The way to bind the object that shows this modal is by using
+            the
+            <span class="code">for-modal</span> attribute, which should be assigned to the ID of the modal. So, in this
+            example we would use <span class="code">for-modal="testModal"</span>, and we can add this to *any* element!
+            For
+            example:
+        </p>
+
+        <div style="margin-top: 4rem; margin-bottom: 4rem;"></div>
+
+        <div class="centered">
+            <p style="cursor: pointer" for-modal="testModal">Modal Triggering Text</p>
+            <div style="margin-top: 4rem; margin-bottom: 4rem;"></div>
+            <button style="cursor: pointer" for-modal="testModal">Modal Triggering Button</button>
+        </div>
+
+        <div style="margin-top: 4rem; margin-bottom: 4rem;"></div>
+
+        <img style="cursor: pointer" for-modal="testModal" class="centered large rounded"
+            src="https://i.ytimg.com/vi/5tjr7g5WFqc/maxresdefault.jpg">
+
+    </div>
+
+    <!-- MODALS: -->
+
+    <div id="testModal" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h2>
+                YouTube Embed Demo In A Modal
+            </h2>
+            <div class="embed">
+                <iframe src="https://www.youtube.com/embed/5tjr7g5WFqc" frameborder="0"
+                    allow="accelerometer;; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
     </div>
 
 
@@ -282,22 +446,6 @@
                         This page not only shows you how these things work, but demo to me how they're turning out too!
                     </li>
                 </ul>
-            </div>
-        </div>
-    </div>
-
-    <div id="ytModal" class="modal">
-        <div class="modal-content">
-            <span class="close">
-                <i class="fa fa-close"></i>
-            </span>
-            <h2>
-                YouTube Embed Demo In A Modal
-            </h2>
-            <div class="embed">
-                <iframe src="https://www.youtube.com/embed/IFfLCuHSZ-U" frameborder="0"
-                    allow="accelerometer;; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
             </div>
         </div>
     </div>

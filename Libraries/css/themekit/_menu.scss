@@ -26,6 +26,10 @@
     text-decoration: none;
   }
 
+  &.translucent {
+      background-color: rgba(map-get($dark, "background"), 0.95);
+  }
+
   .item {
     display: inline-flex;
     flex-direction: column;

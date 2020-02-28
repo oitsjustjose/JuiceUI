@@ -13,9 +13,23 @@ button {
   font-family: "Spartan";
 }
 
+p {
+  line-height: 2;
+}
+
 .code {
   font-family: "Fira Code";
   font-variant-ligatures: common-ligatures;
+  background-color: lighten($background, 10%);
+  border: 2px solid lighten($background, 5%);
+  padding: 0.4rem;
+  border-radius: 4px;
+}
+
+p.code,
+pre {
+  display: inline-block;
+  overflow: scroll;
 }
 
 pre {
@@ -53,6 +67,12 @@ a {
   align-items: center;
   justify-content: center;
 
+  &.gradient {
+    background: url("/Resources/img/cover.png"), $mastColor;
+    background: url("/Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
+    background: url("/Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
+  }
+
   p.content {
     font-size: 64px;
     font-weight: 900;
@@ -86,6 +106,16 @@ a {
 .centered {
   text-align: center;
   margin: auto;
+}
+
+.in-center {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+img.centered {
+  display: block;
 }
 
 .blurred {
