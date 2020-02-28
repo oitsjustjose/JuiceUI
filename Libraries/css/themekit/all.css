@@ -8,6 +8,9 @@ button {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 0.3em;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
@@ -40,6 +43,35 @@ button.outlined:hover {
 button.outlined:active {
   background-color: transparent;
   border: 2px solid #404040;
+}
+
+button.white {
+  background-color: #eeeeee;
+  color: #252525;
+}
+
+button.white:hover {
+  background-color: white;
+}
+
+button.white:active {
+  background-color: #f3f3f3;
+}
+
+button.white.outlined {
+  background-color: transparent;
+  color: #eeeeee;
+  border: 2px solid #eeeeee;
+}
+
+button.white.outlined:hover {
+  color: white;
+  border: 2px solid white;
+}
+
+button.white.outlined:active {
+  color: #f3f3f3;
+  border: 2px solid #f3f3f3;
 }
 
 button.red {
@@ -405,7 +437,7 @@ p {
 p.code,
 pre {
   display: inline-block;
-  overflow: scroll;
+  overflow: auto;
 }
 
 pre {
@@ -459,9 +491,9 @@ a:hover {
 }
 
 .masthead.gradient {
-  background: url("/Resources/img/cover.png"), #7cb342;
-  background: url("/Resources/img/cover.png"), -webkit-gradient(linear, right top, left bottom, from(#00bee0), to(#7cb342));
-  background: url("/Resources/img/cover.png"), linear-gradient(to bottom left, #00bee0, #7cb342);
+  background: url("../../../Resources/img/cover.png"), #7cb342;
+  background: url("../../../Resources/img/cover.png"), -webkit-gradient(linear, right top, left bottom, from(#00bee0), to(#7cb342));
+  background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, #00bee0, #7cb342);
 }
 
 .masthead p.content {
@@ -573,8 +605,8 @@ img.large {
 }
 
 .bounce {
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s 10;
+  animation: bounce 2s 10;
 }
 
 @-webkit-keyframes bounce {
@@ -628,6 +660,31 @@ li {
   line-height: 1.75;
 }
 
+.color-demo {
+  text-align: center;
+}
+
+.color-demo.red {
+  background-color: #ff4340;
+}
+
+.color-demo.blue {
+  background-color: #00bee0;
+}
+
+.color-demo.green {
+  background-color: #7cb342;
+}
+
+.color-demo.bg {
+  background-color: #252525;
+}
+
+.color-demo.fg {
+  background-color: #eeeeee;
+  color: #252525;
+}
+
 .embed {
   position: relative;
   overflow: hidden;
@@ -641,5 +698,17 @@ li {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(120px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-gap: 2rem;
+  grid-auto-flow: dense;
 }
 /*# sourceMappingURL=all.css.map */

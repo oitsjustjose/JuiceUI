@@ -29,7 +29,7 @@ p {
 p.code,
 pre {
   display: inline-block;
-  overflow: scroll;
+  overflow: auto;
 }
 
 pre {
@@ -68,9 +68,9 @@ a {
   justify-content: center;
 
   &.gradient {
-    background: url("/Resources/img/cover.png"), $mastColor;
-    background: url("/Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
-    background: url("/Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
+    background: url("../../../Resources/img/cover.png"), $mastColor;
+    background: url("../../../Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
+    background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
   }
 
   p.content {
@@ -164,9 +164,9 @@ img {
 }
 
 .bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+  -moz-animation: bounce 2s 10;
+  -webkit-animation: bounce 2s 10;
+  animation: bounce 2s 10;
 }
 
 @keyframes bounce {
@@ -194,4 +194,29 @@ li {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
   line-height: 1.75;
+}
+
+.color-demo {
+  text-align: center;
+
+  &.red {
+    background-color: $red;
+  }
+
+  &.blue {
+    background-color: $cyan;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.bg {
+    background-color: $background;
+  }
+
+  &.fg {
+    background-color: $foreground;
+    color: $background;
+  }
 }

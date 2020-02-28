@@ -155,34 +155,23 @@
             </p>
         </div>
 
-        <div class="in-center">
-            <table cellspacing="16">
-                <tr>
-                    <td style="background-color: #ff4340;">
-                        Red
-                    </td>
-                </tr>
-                <tr>
-                    <td style="background-color: #00bee0; color: #252525;">
-                        Blue
-                    </td>
-                </tr>
-                <tr>
-                    <td style="background-color: #7cb342;">
-                        Green
-                    </td>
-                </tr>
-                <tr>
-                    <td style="background-color: #252525; color: #eeeeee;">
-                        Background
-                    </td>
-                </tr>
-                <tr>
-                    <td style="background-color: #eeeeee; color: #252525;">
-                        Foreground
-                    </td>
-                </tr>
-            </table>
+
+        <div class="grid">
+            <div class="color-demo red">
+                Red
+            </div>
+            <div class="color-demo blue">
+                Blue
+            </div>
+            <div class="color-demo green">
+                Green
+            </div>
+            <div class="color-demo bg">
+                Background
+            </div>
+            <div class="color-demo fg">
+                Foreground
+            </div>
         </div>
     </div>
 
@@ -278,28 +267,35 @@
         <div class="in-center">
             <p class="code">
                 &lt;button&gt;Plain&lt;/button&gt;<br>
+                &lt;button class="white"&gt;White&lt;/button&gt;<br>
                 &lt;button class="red"&gt;Red&lt;/button&gt;<br>
                 &lt;button class="cyan"&gt;Cyan&lt;/button&gt;<br>
                 &lt;button class="green"&gt;Green&lt;/button&gt;<br>
             </p>
         </div>
 
-        <table class="centered">
-            <tr>
-                <td>
-                    <button>Plain</button>
-                </td>
-                <td>
-                    <button class="red">Red</button>
-                </td>
-                <td>
-                    <button class="cyan">Cyan</button>
-                </td>
-                <td>
-                    <button class="green">Green</button>
-                </td>
-            </tr>
-        </table>
+        <div class="centered grid" style="max-width:30vw">
+            <div class="in-center">
+                <button>Plain</button>
+            </div>
+
+            <div class="in-center">
+                <button class="white">White</button>
+            </div>
+
+            <div class="in-center">
+                <button class="red">Red</button>
+            </div>
+
+            <div class="in-center">
+                <button class="cyan">Cyan</button>
+            </div>
+
+            <div class="in-center">
+                <button class="green">Green</button>
+            </div>
+
+        </div>
 
         <p class="centered" style="margin-top: 2rem; margin-bottom: .5rem;">
             Buttons can also be <sub>smol</sub>
@@ -394,10 +390,13 @@
         </div>
 
         <p class="centered">
-            This modal won't be shown in any way though! The way to bind the object that shows this modal is by using
+            This modal won't be shown in any way though! The way to bind the object that shows this modal is by
+            using
             the
-            <span class="code">for-modal</span> attribute, which should be assigned to the ID of the modal. So, in this
-            example we would use <span class="code">for-modal="testModal"</span>, and we can add this to *any* element!
+            <span class="code">for-modal</span> attribute, which should be assigned to the ID of the modal. So, in
+            this
+            example we would use <span class="code">for-modal="testModal"</span>, and we can add this to *any*
+            element!
             For
             example:
         </p>
@@ -451,7 +450,8 @@
                         This ThemeKit is written from scratch with minimal JQuery (using DOM where possible)
                     </li>
                     <li>
-                        This page not only shows you how these things work, but demo to me how they're turning out too!
+                        This page not only shows you how these things work, but demo to me how they're turning out
+                        too!
                     </li>
                 </ul>
             </div>

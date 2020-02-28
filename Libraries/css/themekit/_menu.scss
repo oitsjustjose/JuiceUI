@@ -27,7 +27,7 @@
   }
 
   &.translucent {
-      background-color: rgba(map-get($dark, "background"), 0.95);
+    background-color: rgba(map-get($dark, "background"), 0.95);
   }
 
   .item {
