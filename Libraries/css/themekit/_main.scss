@@ -123,7 +123,6 @@ img {
   }
 }
 
-
 .divider {
   width: 70vw;
   height: 10px;
@@ -154,4 +153,15 @@ img {
   60% {
     transform: translateY(-15px);
   }
+}
+
+ul {
+  padding-inline-start: 0;
+  padding-inline-end: 40px;
+}
+
+li {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.75;
 }

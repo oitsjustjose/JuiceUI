@@ -42,10 +42,8 @@ const toggleMenu = () => {
 
         if (visible) {
             document.body.classList.add("no-scroll");
-            console.log("not visible");
         } else {
             document.body.classList.remove("no-scroll");
-            console.log("visible");
         }
     });
 

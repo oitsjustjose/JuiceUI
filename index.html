@@ -16,18 +16,18 @@
     <script src="Libraries/js/jquery-3.4.1.min.js"></script>
     <script src="Libraries/js/jquery-ui.min.js"></script>
     <script src="Libraries/js/themekit/menu.js"></script>
+    <script src="Libraries/js/themekit/modal.js"></script>
     <title>Juice-UI</title>
 </head>
 
 <body>
     <div class="top titlebar">
-
         <div class="mobile-menu">
             <div class="close-mobile-menu" onclick='toggleMenu()'>
                 <i class="fa fa-close"></i>
             </div>
 
-            <div class="compact item">
+            <div class="compact item" for-modal="aboutModal">
                 About
             </div>
             <div class="compact item">
@@ -63,11 +63,11 @@
         </div>
 
 
-        <div class="item">
+        <div class="item" for-modal="aboutModal">
             <span>About&nbsp;<i class="fa fa-info"></i></span>
         </div>
         <a href="https://github.com/oitsjustjose/ThemeKit" target="_blank" class="item">
-           <span>GitHub&nbsp;<i class="fa fa-github"></i></span>
+            <span>GitHub&nbsp;<i class="fa fa-github"></i></span>
         </a>
         <div class="item">
             Reddit
@@ -270,6 +270,27 @@
     </div>
 
 
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <div class="container">
+                <h2>About This Page</h2>
+                <ul>
+                    <li>
+                        This page was written with mobile optimization first!
+                    </li>
+                    <li>
+                        This ThemeKit is written from scratch with minimal JQuery (using DOM where possible)
+                    </li>
+                    <li>
+                        This page not only shows you how these things work, but demo to me how they're turning out too!
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </body>
 
