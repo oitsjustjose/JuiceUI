@@ -1,0 +1,128 @@
+@import "colors";
+
+button {
+  //   padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+  background-color: map-get($dark, "button");
+  color: $foreground;
+  user-select: none;
+  cursor: pointer;
+
+  border-radius: 0.3em;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.75);
+  padding: 2em;
+  font-size: 12px;
+
+  &:hover {
+    background-color: lighten(map-get($dark, "buttonActive"), 10%);
+  }
+
+  &:active {
+    background-color: map-get($dark, "buttonActive");
+  }
+
+  &.small {
+    padding: 0.5rem 0.75rem;
+  }
+
+  &.outlined {
+    background-color: transparent;
+    border: 2px solid map-get($dark, "button");
+
+    &:hover {
+      background-color: transparent;
+      border: 2px solid lighten(map-get($dark, "buttonActive"), 10%);
+    }
+
+    &:active {
+      background-color: transparent;
+      border: 2px solid map-get($dark, "buttonActive");
+    }
+  }
+
+  &.red {
+    background-color: $red;
+
+    &:hover {
+      background-color: lighten($red, 10%);
+    }
+
+    &:active {
+      background-color: lighten($red, 5%);
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: $red;
+      border: 2px solid $red;
+
+      &:hover {
+        color: lighten($red, 10%);
+        border: 2px solid lighten($red, 10%);
+      }
+
+      &:active {
+        color: lighten($red, 5%);
+        border: 2px solid lighten($red, 5%);
+      }
+    }
+  }
+
+  &.green {
+    background-color: $green;
+
+    &:hover {
+      background-color: lighten($green, 10%);
+    }
+
+    &:active {
+      background-color: lighten($green, 5%);
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: $green;
+      border: 2px solid $green;
+
+      &:hover {
+        color: lighten($green, 10%);
+        border: 2px solid;
+      }
+
+      &:active {
+        color: lighten($green, 5%);
+        border: 2px solid;
+      }
+    }
+  }
+
+  &.cyan {
+    background-color: $cyan;
+    color: $background;
+
+    &:hover {
+      background-color: lighten($cyan, 10%);
+    }
+
+    &:active {
+      background-color: lighten($cyan, 5%);
+    }
+
+    &.outlined {
+      background-color: transparent;
+      color: $cyan;
+      border: 2px solid $cyan;
+
+      &:hover {
+        color: lighten($cyan, 10%);
+        border: 2px solid lighten($cyan, 10%);
+      }
+
+      &:active {
+        color: lighten($cyan, 5%);
+        border: 2px solid lighten($cyan, 5%);
+      }
+    }
+  }
+}
