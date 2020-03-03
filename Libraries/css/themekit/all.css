@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Code&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
 button {
   padding: 0.75rem 1rem;
   border: none;
@@ -218,7 +220,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #3a3a3a;
-  font-family: "Spartan";
   padding: 0px 1rem;
   height: 100%;
   cursor: pointer;
