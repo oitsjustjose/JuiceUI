@@ -456,18 +456,30 @@
                 </p>
             </div>
 
-            <div class="card">
+            <div class="card" for-modal="card-modal-demo">
                 <h3 class="header">Card 3</h3>
                 <p class="content">
-                    Here, have a very nice lorem picsum image courtesy of <span
-                        class="code">i.picsum.photos/id/107/5760/3840.jpg</span>
-                    <img class="" src="https://i.picsum.photos/id/107/5760/3840.jpg">
+                    Click on me!<br><br>
+
+                    By click on this card, you should see a Modal pop up as a result with an image!
                 </p>
             </div>
         </div>
     </div>
 
     <!-- MODALS: -->
+
+    <div id="card-modal-demo" class="modal">
+        <div class="modal-content">
+            <span class="close">
+                <i class="fa fa-close"></i>
+            </span>
+            <h3 class="header">
+                Card Modal Demo
+            </h3>
+            <img class="" src="https://i.picsum.photos/id/107/5760/3840.jpg">
+        </div>
+    </div>
 
     <div id="testModal" class="modal">
         <div class="modal-content">
