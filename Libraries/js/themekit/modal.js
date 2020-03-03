@@ -26,11 +26,11 @@ window.addEventListener("DOMContentLoaded", (evt) => {
         });
     });
 
-    document.querySelectorAll("[for-modal]").forEach((modalTrigerEl) => {
-        let modal = document.getElementById(modalTrigerEl.getAttribute("for-modal"));
-        modal.classList.remove("visible");
-        modal.removeAttribute("active");
-    });
+    // document.querySelectorAll("[for-modal]").forEach((modalTrigerEl) => {
+    //     let modal = document.getElementById(modalTrigerEl.getAttribute("for-modal"));
+    //     modal.classList.remove("visible");
+    //     modal.removeAttribute("active");
+    // });
 
     document.body.addEventListener('keydown', (evt) => {
         if (evt.key == "Escape") {

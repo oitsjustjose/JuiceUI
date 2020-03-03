@@ -1,22 +1,12 @@
 /******************************************************
 *   FIXED COLORS (Change these to propagate chages)   *
 ******************************************************/
-
-$background: #252525;
-$foreground: #eeeeee;
+$background: #eeeeee;
+$foreground: #252525;
 $components: (
-  "item": #3a3a3a,
-  "button": #3a3a3a
+  "item": #d0d0d0,
+  "button": #d0d0d0
 );
-
-// UNCOMMENT FOR LIGHT MODE!
-
-// $background: #eeeeee;
-// $foreground: #252525;
-// $components: (
-//   "item": #d0d0d0,
-//   "button": #d0d0d0,
-// );
 
 $red: #ff4340;
 $cyan: #00bee0;
