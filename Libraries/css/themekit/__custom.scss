@@ -7,66 +7,20 @@ body {
   margin-right: 0px;
 }
 
-a {
-  color: $red;
-  &:hover {
-    color: darken($red, 10%);
-  }
-}
 
-.container {
-  width: 90vw;
-  margin: 2rem 5vw;
-}
-
-img.centered {
-  display: block;
-}
 
 .blurred {
   filter: blur(5px);
 
   &.unblurable {
+    transition: filter ease-in-out 250ms;
     &:hover {
-      transition: all ease-in 150ms;
       filter: none;
+      transition: filter ease-in-out 250ms;
     }
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-
-  &.rounded {
-    border-radius: 8px;
-  }
-
-  &.thumbnail {
-    width: 24px;
-  }
-
-  &.small {
-    width: 128px;
-  }
-
-  &.medium {
-    width: 256px;
-  }
-  &.large {
-    width: 512px;
-  }
-}
-
-.divider {
-  width: 70vw;
-  height: 10px;
-  border-bottom: 1px solid map-get($dark, "item");
-  margin: 1rem 15vw;
-  &.wide {
-    width: 100vw;
-  }
-}
 
 .bounce {
   -moz-animation: bounce 2s 10;
@@ -124,8 +78,6 @@ img {
   }
 
   &:hover {
-    margin-top: -0.25rem; // "Pop Up" action on hover
-    margin-bottom: 0.25rem; // Prevent the entire page from shifting on hover
-    transition: all ease-in-out 150ms; // Smooth out the animation
+    transform: translateY(-10px);
   }
 }

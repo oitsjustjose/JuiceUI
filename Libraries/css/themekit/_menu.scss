@@ -1,8 +1,8 @@
 @import "colors";
 
 .titlebar.top {
-  background-color: map-get($dark, "background");
-  color: map-get($dark, "foreground");
+  background-color: $background;
+  color: $foreground;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 0px 0px rgba(darken($background, 10%), 0.5);
   @at-root .masthead {
     height: calc(100vh - 3rem);
   }
@@ -27,7 +27,7 @@
   }
 
   &.translucent {
-    background-color: rgba(map-get($dark, "background"), 0.95);
+    background-color: rgba($background, 0.95);
   }
 
   .item {
@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: center;
 
-    background-color: map-get($dark, "item");
+    background-color: map-get($components, "item");
     padding: 0px 1rem;
     height: 100%;
     cursor: pointer;
@@ -45,7 +45,7 @@
     }
 
     &:hover {
-      background-color: map-get($dark, "background");
+      background-color: darken($background, 5%);
       transition: all ease-in 150ms;
     }
   }
@@ -100,7 +100,7 @@
 
   .sub.item {
     padding-left: 3rem;
-    background-color: map-get($dark, "buttonActive");
+    background-color: lighten($background, 15%);
   }
 }
 
@@ -127,7 +127,7 @@
     -o-transition: max-height 0.5s ease-in-out;
     transition: max-height 0.5s ease-in-out;
     position: absolute;
-    background-color: map-get($dark, "item");
+    background-color: map-get($components, "item");
 
     & .item {
       color: $foreground;
@@ -136,7 +136,7 @@
       display: block;
 
       &:hover {
-        background-color: $background;
+        background-color: darken($background, 5%);
         transition: all ease-in 150ms;
       }
     }
