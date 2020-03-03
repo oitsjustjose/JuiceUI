@@ -5,10 +5,18 @@
 let menuOpen = false;
 
 const toggleSubMenu = (el) => {
-    $(`[for="${el.getAttribute("from")}"`).toggle("slide", "down");
 
     let icon = el.querySelector("i.fa");
     let isOpen = icon.hasAttribute("submenuOpen") ? parseInt(icon.getAttribute("submenuOpen")) : 0;
+
+
+    document.querySelectorAll(`[for=${el.getAttribute("from")}]`).forEach((elSearched) => {
+        if (isOpen == 1) {
+            elSearched.classList.remove("visible");
+        } else {
+            elSearched.classList.add("visible");
+        }
+    });
 
     if (isOpen == 1) {
         icon.style.transition = "transform ease-in-out 250ms";
@@ -41,7 +49,6 @@ window.addEventListener("DOMContentLoaded", (evt) => {
 
         el.querySelectorAll(".compact.sub.item").forEach((child) => {
             child.setAttribute("for", id);
-            child.style.display = "none";
             child.textContent = `${child.textContent}`;
             el.parentElement.appendChild(child);
         });

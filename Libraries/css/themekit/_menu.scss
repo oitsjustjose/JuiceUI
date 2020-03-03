@@ -112,6 +112,20 @@
   .sub.item {
     padding-left: 3rem;
     background-color: lighten($background, 15%);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition-duration: 200ms, 200ms;
+    transition-property: visibility, opacity;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transition-duration: 200ms, 0;
+      transition-property: opacity, visibility;
+      transition-delay: 0, 200ms;
+    }
   }
 }
 

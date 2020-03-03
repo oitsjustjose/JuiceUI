@@ -737,6 +737,23 @@ body {
 .mobile-menu .sub.item {
   padding-left: 3rem;
   background-color: #4b4b4b;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition-duration: 200ms, 200ms;
+          transition-duration: 200ms, 200ms;
+  -webkit-transition-property: visibility, opacity;
+  transition-property: visibility, opacity;
+}
+
+.mobile-menu .sub.item.visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-duration: 200ms, 0;
+          transition-duration: 200ms, 0;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition-delay: 0, 200ms;
+          transition-delay: 0, 200ms;
 }
 
 .no-scroll {
