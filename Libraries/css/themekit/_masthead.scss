@@ -17,6 +17,7 @@
     &.rainbow {
       background: linear-gradient(45deg, #ff0000, #ffb200, #f2ff00, #00c00c, #00d2d0, #0040d2, #a400f6, #f600f1);
       background-size: 1600% 1600%;
+      color: #252525;
 
       -webkit-animation: RainbowGradient 30s ease infinite;
       -moz-animation: RainbowGradient 30s ease infinite;

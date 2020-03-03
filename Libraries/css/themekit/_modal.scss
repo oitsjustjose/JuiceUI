@@ -1,4 +1,7 @@
 .modal {
+  visibility: hidden;
+  opacity: 0;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -13,6 +16,17 @@
   overflow: auto;
   background-color: $background;
   background-color: rgba(0, 0, 0, 0.75);
+
+  transition-duration: 400ms, 400ms;
+  transition-property: visibility, opacity;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 400ms, 0;
+    transition-property: opacity, visibility;
+    transition-delay: 0, 400ms;
+  }
 }
 
 /* Modal Content */
@@ -54,16 +68,20 @@
 
   /* The Close Button */
   .close {
-    color: #eeeeee;
+    color: $foreground;
     float: right;
     font-size: 28px;
     font-weight: bold;
 
     &:hover,
     &:focus {
-      color: #ffffff;
+      color: invert($foreground, 20%);
       text-decoration: none;
       cursor: pointer;
     }
   }
+}
+
+.modal-no-scroll {
+  overflow: hidden;
 }

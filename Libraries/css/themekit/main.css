@@ -443,6 +443,7 @@ img.large {
 .masthead.gradient.rainbow {
   background: linear-gradient(45deg, #ff0000, #ffb200, #f2ff00, #00c00c, #00d2d0, #0040d2, #a400f6, #f600f1);
   background-size: 1600% 1600%;
+  color: #252525;
   -webkit-animation: RainbowGradient 30s ease infinite;
   animation: RainbowGradient 30s ease infinite;
 }
@@ -593,15 +594,31 @@ body {
 }
 
 .mobile-menu {
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   z-index: 1024;
   top: 0;
   left: 0;
-  display: none;
   width: 100vw;
   height: 100vh;
   background-color: rgba(37, 37, 37, 0.95);
   color: #eeeeee;
+  -webkit-transition-duration: 200ms, 200ms;
+          transition-duration: 200ms, 200ms;
+  -webkit-transition-property: visibility, opacity;
+  transition-property: visibility, opacity;
+}
+
+.mobile-menu.visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-duration: 200ms, 0;
+          transition-duration: 200ms, 0;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition-delay: 0, 200ms;
+          transition-delay: 0, 200ms;
 }
 
 .mobile-menu .close-mobile-menu {
@@ -699,6 +716,8 @@ body {
 }
 
 .modal {
+  visibility: hidden;
+  opacity: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,6 +740,21 @@ body {
   overflow: auto;
   background-color: #252525;
   background-color: rgba(0, 0, 0, 0.75);
+  -webkit-transition-duration: 400ms, 400ms;
+          transition-duration: 400ms, 400ms;
+  -webkit-transition-property: visibility, opacity;
+  transition-property: visibility, opacity;
+}
+
+.modal.visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-duration: 400ms, 0;
+          transition-duration: 400ms, 0;
+  -webkit-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition-delay: 0, 400ms;
+          transition-delay: 0, 400ms;
 }
 
 /* Modal Content */
@@ -771,9 +805,13 @@ body {
 }
 
 .modal-content .close:hover, .modal-content .close:focus {
-  color: #ffffff;
+  color: #c2c2c2;
   text-decoration: none;
   cursor: pointer;
+}
+
+.modal-no-scroll {
+  overflow: hidden;
 }
 
 a,

@@ -1,24 +1,8 @@
-const rotate = ($elem, angle) => {
-    $({ deg: 0 }).animate({ deg: angle }, {
-        duration: 150,
-        step: function (now) {
-            $elem.css({
-                transform: 'rotate(' + now + 'deg)'
-            });
-        }
-    });
-};
+/**
+ * Uses ZERO Jquery!!
+ */
 
-const unrotate = ($elem, angle) => {
-    $({ deg: angle }).animate({ deg: 0 }, {
-        duration: 150,
-        step: function (now) {
-            $elem.css({
-                transform: 'rotate(' + now + 'deg)'
-            });
-        }
-    });
-};
+let menuOpen = false;
 
 const toggleSubMenu = (el) => {
     $(`[for="${el.getAttribute("from")}"`).toggle("slide", "down");
@@ -27,29 +11,30 @@ const toggleSubMenu = (el) => {
     let isOpen = icon.hasAttribute("submenuOpen") ? parseInt(icon.getAttribute("submenuOpen")) : 0;
 
     if (isOpen == 1) {
-        unrotate($(icon), 90);
+        icon.style.transition = "transform ease-in-out 250ms";
+        icon.style.transform = "rotate(0deg)";
         icon.setAttribute("submenuOpen", 0);
     } else { // Not open..
-        rotate($(icon), 90);
+        icon.style.transition = "transform ease-in-out 250ms";
+        icon.style.transform = "rotate(90deg)";
         icon.setAttribute("submenuOpen", 1);
     }
 };
 
 const toggleMenu = () => {
-    $(".mobile-menu").toggle("slide", "left", () => {
+    let menu = document.querySelector(".mobile-menu");
+    menuOpen = !menuOpen;
 
-        let visible = document.querySelector(".mobile-menu").style.display != "none";
-
-        if (visible) {
-            document.body.classList.add("no-scroll");
-        } else {
-            document.body.classList.remove("no-scroll");
-        }
-    });
-
+    if (menuOpen) {
+        menu.classList.add("visible");
+        document.body.classList.add("no-scroll");
+    } else {
+        menu.classList.remove("visible");
+        document.body.classList.remove("no-scroll");
+    }
 };
 
-$(document).ready(() => {
+window.addEventListener("DOMContentLoaded", (evt) => {
     document.querySelectorAll(".compact.submenu.item").forEach((el) => {
         let id = `subMenu_${new Date().getMilliseconds()}`;
         el.setAttribute("from", id);

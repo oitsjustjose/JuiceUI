@@ -67,15 +67,28 @@
 }
 
 .mobile-menu {
+  visibility: hidden;
+  opacity: 0;
+
   position: fixed;
   z-index: 1024;
   top: 0;
   left: 0;
-  display: none;
   width: 100vw;
   height: 100vh;
   background-color: rgba($background, 0.95);
   color: $foreground;
+
+  transition-duration: 200ms, 200ms;
+  transition-property: visibility, opacity;
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+    transition-duration: 200ms, 0;
+    transition-property: opacity, visibility;
+    transition-delay: 0, 200ms;
+  }
 
   .close-mobile-menu {
     display: flex;

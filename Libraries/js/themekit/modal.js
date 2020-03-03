@@ -1,37 +1,43 @@
-$(document).ready(() => {
-    // Close when clicking on *not* the modal-contents
+window.addEventListener("DOMContentLoaded", (evt) => {
     window.onclick = (event) => {
         if (event.target.classList.contains("modal")) {
-            $(event.target).hide("fade", {
-                direction: "out",
-            }, 300);
-            document.body.classList.remove("no-scroll");
+            let modal = event.target;
+            modal.classList.remove("visible");
+            modal.removeAttribute("active");
+            document.body.classList.remove("modal-no-scroll");
         }
     };
 
     document.querySelectorAll(".modal .close").forEach((closeBtn) => {
         closeBtn.addEventListener('click', (evt) => {
-            $(closeBtn.parentElement.parentElement).hide("fade", {
-                direction: "out",
-            }, 300);
-            document.body.classList.remove("no-scroll");
+            let modal = closeBtn.parentElement.parentElement;
+            modal.classList.remove("visible");
+            modal.removeAttribute("active");
+            document.body.classList.remove("modal-no-scroll");
         });
     });
 
     document.querySelectorAll("[for-modal]").forEach((modalTrigerEl) => {
         modalTrigerEl.addEventListener('click', (evt) => {
-            // document.getElementById(modalTrigerEl.getAttribute("for-modal")).style.display = "flex";
-            $(`#${modalTrigerEl.getAttribute("for-modal")}`).show("fade", {
-                direction: "in",
-            }, 300);
-            document.body.classList.add("no-scroll");
+            let modal = document.getElementById(modalTrigerEl.getAttribute("for-modal"));
+            modal.classList.add("visible");
+            modal.setAttribute("active", "");
+            document.body.classList.add("modal-no-scroll");
         });
     });
-});
 
-$(document).ready(() => {
     document.querySelectorAll("[for-modal]").forEach((modalTrigerEl) => {
-        $(`#${modalTrigerEl.getAttribute("for-modal")}`).hide();
+        let modal = document.getElementById(modalTrigerEl.getAttribute("for-modal"));
+        modal.classList.remove("visible");
+        modal.removeAttribute("active");
+    });
+
+    document.body.addEventListener('keydown', (evt) => {
+        if (evt.key == "Escape") {
+            let modal = document.querySelector(".modal[active]");
+            modal.classList.remove("visible");
+            modal.removeAttribute("active");
+            document.body.classList.remove("modal-no-scroll");
+        }
     });
 });
-
