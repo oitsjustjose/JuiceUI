@@ -113,6 +113,8 @@
     padding-left: 3rem;
     background-color: lighten($background, 15%);
 
+    display: none;
+    height: 0;
     visibility: hidden;
     opacity: 0;
 
@@ -120,6 +122,8 @@
     transition-property: visibility, opacity;
 
     &.visible {
+      display: inline-flex;
+      height: 4rem;
       visibility: visible;
       opacity: 1;
       transition-duration: 200ms, 0;

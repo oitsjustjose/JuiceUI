@@ -47,10 +47,18 @@ window.addEventListener("DOMContentLoaded", (evt) => {
         let id = `subMenu_${new Date().getMilliseconds()}`;
         el.setAttribute("from", id);
 
+        let subMenuItems = [];
+
         el.querySelectorAll(".compact.sub.item").forEach((child) => {
+            subMenuItems.push(child);
+        });
+
+        subMenuItems.reverse();
+
+        subMenuItems.forEach((child) => {
             child.setAttribute("for", id);
             child.textContent = `${child.textContent}`;
-            el.parentElement.appendChild(child);
+            el.parentElement.insertBefore(child, el.nextSibling);
         });
     });
 });

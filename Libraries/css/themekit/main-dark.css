@@ -737,6 +737,8 @@ body {
 .mobile-menu .sub.item {
   padding-left: 3rem;
   background-color: #4b4b4b;
+  display: none;
+  height: 0;
   visibility: hidden;
   opacity: 0;
   -webkit-transition-duration: 200ms, 200ms;
@@ -746,6 +748,10 @@ body {
 }
 
 .mobile-menu .sub.item.visible {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 4rem;
   visibility: visible;
   opacity: 1;
   -webkit-transition-duration: 200ms, 0;
