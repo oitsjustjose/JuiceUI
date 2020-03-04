@@ -110,26 +110,46 @@
   }
 
   .sub.item {
+    display: block;
+
     padding-left: 3rem;
     background-color: lighten($background, 15%);
 
-    display: none;
-    height: 0;
-    visibility: hidden;
-    opacity: 0;
+    -moz-animation: disappear 250ms 1;
+    -webkit-animation: disappear 250ms 1;
+    animation: disappear 250ms 1;
 
-    transition-duration: 200ms, 200ms;
-    transition-property: visibility, opacity;
+    // USE HEIGHT TO ANIMATE
+    max-height: 0;
 
     &.visible {
       display: inline-flex;
-      height: 4rem;
-      visibility: visible;
-      opacity: 1;
-      transition-duration: 200ms, 0;
-      transition-property: opacity, visibility;
-      transition-delay: 0, 200ms;
+
+      // USE HEIGHT TO ANIMATE
+      max-height: 4rem;
+
+      -moz-animation: appear 250ms 1;
+      -webkit-animation: appear 250ms 1;
+      animation: appear 250ms 1;
     }
+  }
+}
+
+@keyframes appear {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 4rem;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    max-height: 4rem;
+  }
+  100% {
+    max-height: 0;
   }
 }
 

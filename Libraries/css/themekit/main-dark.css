@@ -735,31 +735,57 @@ body {
 }
 
 .mobile-menu .sub.item {
+  display: block;
   padding-left: 3rem;
   background-color: #4b4b4b;
-  display: none;
-  height: 0;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition-duration: 200ms, 200ms;
-          transition-duration: 200ms, 200ms;
-  -webkit-transition-property: visibility, opacity;
-  transition-property: visibility, opacity;
+  -webkit-animation: disappear 250ms 1;
+  animation: disappear 250ms 1;
+  max-height: 0;
 }
 
 .mobile-menu .sub.item.visible {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  height: 4rem;
-  visibility: visible;
-  opacity: 1;
-  -webkit-transition-duration: 200ms, 0;
-          transition-duration: 200ms, 0;
-  -webkit-transition-property: opacity, visibility;
-  transition-property: opacity, visibility;
-  -webkit-transition-delay: 0, 200ms;
-          transition-delay: 0, 200ms;
+  max-height: 4rem;
+  -webkit-animation: appear 250ms 1;
+  animation: appear 250ms 1;
+}
+
+@-webkit-keyframes appear {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 4rem;
+  }
+}
+
+@keyframes appear {
+  0% {
+    max-height: 0;
+  }
+  100% {
+    max-height: 4rem;
+  }
+}
+
+@-webkit-keyframes disappear {
+  0% {
+    max-height: 4rem;
+  }
+  100% {
+    max-height: 0;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    max-height: 4rem;
+  }
+  100% {
+    max-height: 0;
+  }
 }
 
 .no-scroll {
