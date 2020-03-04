@@ -2,19 +2,15 @@ let currentDisplayMode = "dark";
 
 const updateDisplayModeIcons = () => {
     document.querySelectorAll(".display-mode-icon").forEach((el) => {
-        let icon = document.createElement("i");
         if (currentDisplayMode == "dark") {
-            icon.className = "fa fa-moon-o";
+            el.innerHTML = "☀️";
         } else {
-            icon.className = "fa fa-sun-o";
+            el.innerHTML = "🌑";
         }
-        el.innerHTML = "";
-        el.appendChild(icon);
     });
 };
 
-const toggleDisplayMode = (element) => {
-    console.log("foo");
+const toggleDisplayMode = () => {
     if (currentDisplayMode == "dark") {
         window.localStorage.setItem("displayMode", "light");
         currentDisplayMode = "light";

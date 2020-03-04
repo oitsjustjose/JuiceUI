@@ -122,6 +122,11 @@ body {
           transform: translateY(-10px);
 }
 
+.display-mode-icon {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
 .modal {
   visibility: hidden;
   opacity: 0;
