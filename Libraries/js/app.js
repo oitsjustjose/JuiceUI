@@ -3,6 +3,8 @@ let currentDisplayMode = "dark";
 const updateDisplayModeIcons = () => {
     document.querySelectorAll(".display-mode-icon").forEach((el) => {
         if (currentDisplayMode == "dark") {
+            el.innerHTML = "🌙";
+        } else if (currentDisplayMode == "moonlight") {
             el.innerHTML = "☀️";
         } else {
             el.innerHTML = "🌑";
@@ -12,6 +14,10 @@ const updateDisplayModeIcons = () => {
 
 const toggleDisplayMode = () => {
     if (currentDisplayMode == "dark") {
+        window.localStorage.setItem("displayMode", "moonlight");
+        currentDisplayMode = "moonlight";
+        document.getElementById("themekit-css").href = "Libraries/css/themekit/main-moonlight.css";
+    } else if (currentDisplayMode == "moonlight") {
         window.localStorage.setItem("displayMode", "light");
         currentDisplayMode = "light";
         document.getElementById("themekit-css").href = "Libraries/css/themekit/main-light.css";
@@ -32,6 +38,8 @@ window.addEventListener("DOMContentLoaded", (evt) => {
 
     if (currentDisplayMode == "dark") {
         document.getElementById("themekit-css").href = "Libraries/css/themekit/main-dark.css";
+    } else if (currentDisplayMode == "moonlight") {
+        document.getElementById("themekit-css").href = "Libraries/css/themekit/main-moonlight.css";
     } else {
         document.getElementById("themekit-css").href = "Libraries/css/themekit/main-light.css";
     }
