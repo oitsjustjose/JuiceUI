@@ -33,7 +33,7 @@
     flex-direction: column;
     justify-content: center;
 
-    -webkit-user-select: none;
+    // -webkit-user-select: none;
 
     background-color: map-get($components, "item");
     padding: 0px 1rem;
