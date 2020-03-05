@@ -396,7 +396,7 @@ button.cyan.outlined:active {
 
 .container {
   width: 90vw;
-  margin: 2rem 5vw;
+  padding: 2rem 5vw;
 }
 
 .divider {
@@ -408,6 +408,10 @@ button.cyan.outlined:active {
 
 .divider.wide {
   width: 100vw;
+}
+
+.divider.narrow {
+  width: 30vw;
 }
 
 .embed {
@@ -591,6 +595,11 @@ img.large {
 
 .masthead p.content .subheader {
   font-size: 32px;
+  text-align: center;
+}
+
+.masthead p.content .subsubheader {
+  font-size: 20px;
   text-align: center;
 }
 

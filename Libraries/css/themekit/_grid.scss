@@ -10,7 +10,7 @@
   display: grid;
   flex-direction: row;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(512px, 1fr));
   grid-gap: 2rem;
   grid-auto-flow: dense;
 
