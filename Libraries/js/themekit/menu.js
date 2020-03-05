@@ -57,7 +57,6 @@ window.addEventListener("DOMContentLoaded", (evt) => {
 
         subMenuItems.forEach((child) => {
             child.setAttribute("for", id);
-            child.textContent = `${child.textContent}`;
             el.parentElement.insertBefore(child, el.nextSibling);
         });
     });
