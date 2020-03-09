@@ -161,7 +161,8 @@
   position: relative;
   display: inline-block;
 
-  &:hover .dropdown-content {
+  &.hoverable:hover .dropdown-content,
+  &.active .dropdown-content {
     max-height: 100vh;
     display: block;
   }

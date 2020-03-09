@@ -60,4 +60,22 @@ window.addEventListener("DOMContentLoaded", (evt) => {
             el.parentElement.insertBefore(child, el.nextSibling);
         });
     });
+
+
+    // Add .active to clicked on menus
+    document.querySelectorAll(".dropdown.item").forEach((dropdown) => {
+        dropdown.addEventListener("click", () => {
+            if (dropdown.classList.contains("active")) {
+                dropdown.classList.remove("active");
+            } else {
+                dropdown.classList.add("active");
+            }
+        });
+
+        dropdown.addEventListener("mouseout", () => {
+            if (dropdown.classList.contains("active")) {
+                dropdown.classList.remove("active");
+            }
+        });
+    });
 });

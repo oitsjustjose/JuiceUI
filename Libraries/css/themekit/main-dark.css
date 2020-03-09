@@ -819,7 +819,8 @@ body {
   display: inline-block;
 }
 
-.dropdown.item:hover .dropdown-content {
+.dropdown.item.hoverable:hover .dropdown-content,
+.dropdown.item.active .dropdown-content {
   max-height: 100vh;
   display: block;
 }
