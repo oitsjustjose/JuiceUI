@@ -1,6 +1,13 @@
 .container {
   width: 90vw;
   padding: 2rem 5vw;
+
+  &.centered {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 0;
+  }
 }
 
 .divider {

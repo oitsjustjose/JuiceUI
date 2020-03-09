@@ -400,6 +400,13 @@ button.cyan.outlined:active {
   padding: 2rem 5vw;
 }
 
+.container.centered {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 0;
+}
+
 .divider {
   width: 70vw;
   height: 10px;
