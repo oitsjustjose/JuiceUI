@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************
 *   FIXED COLORS (Change these to propagate chages)   *
 ******************************************************/
@@ -6,11 +7,70 @@
 ******************************************************/
 @import url("https://fonts.googleapis.com/css?family=Fira+Code&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Spartan&display=swap");
+.color-demo {
+  cursor: pointer;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(213, 213, 213, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(213, 213, 213, 0.5);
+  -webkit-transition: all ease-in-out 150ms;
+  transition: all ease-in-out 150ms;
+}
+
+.color-demo.red {
+  background-color: #ff4340;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 17, 13, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(255, 17, 13, 0.5);
+}
+
+Ø .color-demo.blue {
+  background-color: #00bee0;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 147, 173, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(0, 147, 173, 0.5);
+}
+
+.color-demo.green {
+  background-color: #7cb342;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(98, 142, 52, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(98, 142, 52, 0.5);
+}
+
+.color-demo.bg {
+  background-color: #eeeeee;
+}
+
+.color-demo.fg {
+  background-color: #252525;
+  color: #eeeeee;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(37, 37, 37, 0.5);
+          box-shadow: 0px 0px 10px 0px rgba(37, 37, 37, 0.5);
+}
+
+.color-demo:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+.display-mode-icon {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
 body {
   background-color: #eeeeee;
   color: #252525;
   margin-left: 0px;
   margin-right: 0px;
+}
+
+body,
+.item,
+.titlebar,
+.titlebar a span,
+.masthead {
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
 }
 
 .blurred {
@@ -75,65 +135,6 @@ body {
     -webkit-transform: translateY(-15px);
             transform: translateY(-15px);
   }
-}
-
-.color-demo {
-  cursor: pointer;
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(213, 213, 213, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(213, 213, 213, 0.5);
-  -webkit-transition: all ease-in-out 150ms;
-  transition: all ease-in-out 150ms;
-}
-
-.color-demo.red {
-  background-color: #ff4340;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 17, 13, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(255, 17, 13, 0.5);
-}
-
-.color-demo.blue {
-  background-color: #00bee0;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 147, 173, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(0, 147, 173, 0.5);
-}
-
-.color-demo.green {
-  background-color: #7cb342;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(98, 142, 52, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(98, 142, 52, 0.5);
-}
-
-.color-demo.bg {
-  background-color: #eeeeee;
-}
-
-.color-demo.fg {
-  background-color: #252525;
-  color: #eeeeee;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(37, 37, 37, 0.5);
-          box-shadow: 0px 0px 10px 0px rgba(37, 37, 37, 0.5);
-}
-
-.color-demo:hover {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
-}
-
-.display-mode-icon {
-  font-size: 1.4rem;
-  text-align: center;
-}
-
-body,
-.item,
-.titlebar,
-.titlebar a span,
-.masthead {
-  -webkit-transition: all ease-in-out 200ms;
-  transition: all ease-in-out 200ms;
 }
 
 .modal {
@@ -562,9 +563,6 @@ img.large {
 }
 
 .masthead.rainbow {
-  background: url("../../../Resources/img/cover.png"), #7cb342;
-  background: url("../../../Resources/img/cover.png"), -webkit-gradient(linear, right top, left bottom, from(#00bee0), to(#7cb342));
-  background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, #00bee0, #7cb342);
   -webkit-animation: Rainbow 30s ease infinite;
   animation: Rainbow 30s ease infinite;
 }
@@ -595,38 +593,6 @@ img.large {
   background: url("../../../Resources/img/cover.png"), #7cb342;
   background: url("../../../Resources/img/cover.png"), -webkit-gradient(linear, right top, left bottom, from(#00bee0), to(#7cb342));
   background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, #00bee0, #7cb342);
-}
-
-.masthead.gradient.rainbow {
-  background: linear-gradient(45deg, #ff0000, #ffb200, #f2ff00, #00c00c, #00d2d0, #0040d2, #a400f6, #f600f1);
-  background-size: 1600% 1600%;
-  color: #252525;
-  -webkit-animation: RainbowGradient 30s ease infinite;
-  animation: RainbowGradient 30s ease infinite;
-}
-
-@-webkit-keyframes RainbowGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 51%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes RainbowGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 51%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .masthead p.content {

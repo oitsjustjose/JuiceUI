@@ -10,10 +10,6 @@
   justify-content: center;
 
   &.rainbow {
-    background: url("../../../Resources/img/cover.png"), $mastColor;
-    background: url("../../../Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
-    background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
-
     -webkit-animation: Rainbow 30s ease infinite;
     -moz-animation: Rainbow 30s ease infinite;
     animation: Rainbow 30s ease infinite;
@@ -48,50 +44,6 @@
     background: url("../../../Resources/img/cover.png"), $mastColor;
     background: url("../../../Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
     background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
-
-    &.rainbow {
-      background: linear-gradient(45deg, #ff0000, #ffb200, #f2ff00, #00c00c, #00d2d0, #0040d2, #a400f6, #f600f1);
-      background-size: 1600% 1600%;
-      color: #252525;
-
-      -webkit-animation: RainbowGradient 30s ease infinite;
-      -moz-animation: RainbowGradient 30s ease infinite;
-      animation: RainbowGradient 30s ease infinite;
-
-      @-webkit-keyframes RainbowGradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 51%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      @-moz-keyframes RainbowGradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 51%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-      @keyframes RainbowGradient {
-        0% {
-          background-position: 0% 50%;
-        }
-        50% {
-          background-position: 100% 51%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
-      }
-    }
   }
 
   p.content {
