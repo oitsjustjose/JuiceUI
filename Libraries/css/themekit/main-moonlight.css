@@ -127,6 +127,15 @@ body {
   text-align: center;
 }
 
+body,
+.item,
+.titlebar,
+.titlebar a span,
+.masthead {
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
 .modal {
   visibility: hidden;
   opacity: 0;
@@ -550,6 +559,36 @@ img.large {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.masthead.rainbow {
+  background: url("../../../Resources/img/cover.png"), #7cb342;
+  background: url("../../../Resources/img/cover.png"), -webkit-gradient(linear, right top, left bottom, from(#00bee0), to(#7cb342));
+  background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, #00bee0, #7cb342);
+  -webkit-animation: Rainbow 30s ease infinite;
+  animation: Rainbow 30s ease infinite;
+}
+
+@-webkit-keyframes Rainbow {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes Rainbow {
+  0% {
+    -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
+  }
+  100% {
+    -webkit-filter: hue-rotate(360deg);
+            filter: hue-rotate(360deg);
+  }
 }
 
 .masthead.gradient {
