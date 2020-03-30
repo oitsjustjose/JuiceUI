@@ -528,8 +528,8 @@ input[type="submit"].cyan.outlined:active {
 
 input {
   -webkit-appearance: none !important;
-  -moz-appearance: none !important;
-  appearance: none !important;
+     -moz-appearance: none !important;
+          appearance: none !important;
 }
 
 form {
@@ -854,9 +854,9 @@ img.large {
 }
 
 .masthead.gradient {
-  background: url("../../../Resources/img/cover.png"), #7cb342;
-  background: url("../../../Resources/img/cover.png"), -webkit-gradient(linear, right top, left bottom, from(#00bee0), to(#7cb342));
-  background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, #00bee0, #7cb342);
+  background: url("/Resources/img/cover.png"), #7cb342;
+  background: url("/Resources/img/cover.png"), -webkit-gradient(linear, right top, left bottom, from(#00bee0), to(#7cb342));
+  background: url("/Resources/img/cover.png"), linear-gradient(to bottom left, #00bee0, #7cb342);
 }
 
 .masthead p.content {

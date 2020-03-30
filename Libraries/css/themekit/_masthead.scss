@@ -41,9 +41,9 @@
   }
 
   &.gradient {
-    background: url("../../../Resources/img/cover.png"), $mastColor;
-    background: url("../../../Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
-    background: url("../../../Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
+    background: url("/Resources/img/cover.png"), $mastColor;
+    background: url("/Resources/img/cover.png"), -webkit-linear-gradient(to bottom left, $cyan, $green);
+    background: url("/Resources/img/cover.png"), linear-gradient(to bottom left, $cyan, $green);
   }
 
   p.content {
