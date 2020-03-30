@@ -20,13 +20,16 @@ form {
     .flex-form {
         display: grid;
         align-items: center;
-        grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
         grid-gap: 1rem 3rem;
         grid-auto-flow: dense;
         margin: auto;
         padding: 1rem;
 
         &.labelled {
+            @media (max-width: 767px) {
+                grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+            }
             grid-template-columns: 1fr 5fr;
         }
 
