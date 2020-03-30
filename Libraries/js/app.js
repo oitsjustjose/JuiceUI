@@ -3,11 +3,11 @@ let currentDisplayMode = "dark";
 const updateDisplayModeIcons = () => {
     document.querySelectorAll(".display-mode-icon").forEach((el) => {
         if (currentDisplayMode == "dark") {
-            el.innerHTML = "🌙";
+            el.innerHTML = `<i class="fas fa-moon"></i>`;
         } else if (currentDisplayMode == "moonlight") {
-            el.innerHTML = "☀️";
+            el.innerHTML = `<i class="fas fa-sun"></i>`;
         } else {
-            el.innerHTML = "🌑";
+            el.innerHTML = `<i class="fas fa-adjust"></i>`;
         }
     });
 };

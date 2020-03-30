@@ -10,7 +10,7 @@
     background-color: $red;
     box-shadow: 0px 0px 10px 0px rgba(darken($red, 10%), 0.5);
   }
-  Ø &.blue {
+  &.blue {
     background-color: $cyan;
     box-shadow: 0px 0px 10px 0px rgba(darken($cyan, 10%), 0.5);
   }
