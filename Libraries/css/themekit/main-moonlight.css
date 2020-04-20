@@ -190,6 +190,7 @@ body,
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
   overflow: auto;
+  max-width: 1024;
   /* The Close Button */
 }
 
@@ -485,7 +486,6 @@ input[type="submit"].cyan.outlined:active {
 }
 
 .container {
-  width: 90vw;
   padding: 2rem 5vw;
 }
 
@@ -504,7 +504,7 @@ input[type="submit"].cyan.outlined:active {
 }
 
 .divider.wide {
-  width: 100vw;
+  width: 100%;
 }
 
 .divider.narrow {
