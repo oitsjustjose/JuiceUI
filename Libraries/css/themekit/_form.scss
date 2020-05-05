@@ -1,5 +1,22 @@
-input {
-    appearance: none !important;
+textarea {
+    background-color: lighten($background, 25%);
+    color: $foreground;
+    font-family: "Spartan";
+    border-radius: 0.3em;
+    box-shadow: 0px 0px 10px 0px rgba(darken($background, 10%), 0.5);
+    transition: all 150ms ease-in-out;
+    font-size: 14px;
+    padding: 0.75rem 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+    width: -webkit-fill-available;
+    height: auto;
+    margin: 16px;
+
+    &:focus {
+        box-shadow: 0px 0px 10px 0px $cyan;
+    }
 }
 
 form {
@@ -56,6 +73,10 @@ form {
                 padding: 0.75rem 1rem;
                 border: none;
                 outline: none;
+
+                &:focus {
+                    box-shadow: 0px 0px 10px 0px $cyan;
+                }
             }
 
             &[type="color"] {
@@ -74,6 +95,11 @@ form {
             &[type="color"],
             &[type="radio"] {
                 margin: auto;
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0px 0px 10px 0px $cyan;
+                }
             }
 
             &[type="range"] {
